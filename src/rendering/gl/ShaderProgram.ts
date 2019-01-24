@@ -87,7 +87,6 @@ class ShaderProgram {
 
   draw(d: Drawable) {
     this.use();
-
     if (this.attrPos != -1 && d.bindPos()) {
       gl.enableVertexAttribArray(this.attrPos);
       gl.vertexAttribPointer(this.attrPos, 4, gl.FLOAT, false, 0, 0);
