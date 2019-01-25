@@ -107,7 +107,6 @@ function main() {
       ], prevColor[0] / 255.0, prevColor[1] / 255.0, prevColor[2] / 255.0, time);
     } else if (controls.shader == 'custom') 
     {
-      // console.log(controls.color);
       prevColor = controls.color;
       renderer.render(camera, custom, [
         // icosphere,
