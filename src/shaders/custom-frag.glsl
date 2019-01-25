@@ -25,8 +25,8 @@ out vec4 out_Col; // This is the final output color that you will see on your
 
 void main()
 {
-    vec4 color1 = vec4(abs(sin(u_Time) * u_Color * 0.3));
-    vec4 color2 = vec4(abs(fs_Nor.xyz * sin(u_Time) * 0.1), 1.0);
-    vec4 color3 = vec4(abs(fs_LightVec.xyz * cos(u_Time)), 1.0);
-    out_Col = u_Color * (color1 + color2 + color3) / 3.0;
+    vec4 color1 = vec4(u_Color * cos(u_Time) * 0.3);
+    vec4 color2 = vec4(abs(fs_Nor.xyz * cos(u_Time)), 1.0);
+    vec4 color3 = vec4(fs_LightVec.xyz, 1.0);
+    out_Col = u_Color * (color1 + color2 + color3) / 2.0;
 }
